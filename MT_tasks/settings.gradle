@@ -1,0 +1,2 @@
+rootProject.name='MT_tasks'
+include ':app'

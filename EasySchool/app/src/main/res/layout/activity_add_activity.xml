@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Add_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/labeled"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_24dp"
+            android:fontFamily="@font/swam"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:text=" Add Activity "
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <EditText
+            android:id="@+id/ts_title"
+            android:background="@drawable/custom_bourder"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Title" android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp" />
+
+        <EditText
+            android:id="@+id/ts_details"
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_bourder"
+            android:hint="Details"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp" />
+        <EditText
+            android:id="@+id/ts_level"
+            android:background="@drawable/custom_bourder"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="level"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp" />
+        <Button
+            android:id="@+id/post"
+            android:text="Add Task"
+            android:fontFamily="@font/swam"
+            android:background="@drawable/option1"
+            android:layout_marginTop="40dp"
+            android:layout_width="250dp"
+            android:layout_height="70dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

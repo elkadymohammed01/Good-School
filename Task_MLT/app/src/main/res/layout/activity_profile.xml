@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+    <ScrollView
+        style="@style/parent"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                app:contentScrim="@color/profilePrimaryDark"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:expandedTitleTextAppearance="@style/TransparentText"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:toolbarId="@+id/toolbar">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#012"
+        android:textSize="25dp"
+        android:text="Profile"
+        android:gravity="center"
+        android:fontFamily="@font/molkafont"
+        android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_24dp"
+        />
+</LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/me"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/profile_round" />
+
+                    <TextView
+                        android:id="@+id/moname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\@appsnippuser"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/blackTextColor"
+                        />
+
+                    <TextView
+                        android:id="@+id/momail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="developer@appsnipp.com"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="#022"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/mshop"
+                            style="@style/profileStyledBackButton"
+                            android:text="Go to\nmy Tree" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"/>
+            <LinearLayout
+                android:id="@+id/cardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-80dp">
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    style="@style/reportsCardStyle">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/reportContentText"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Tasks"/>
+
+                        <TextView
+                            android:id="@+id/love_all"
+                            style="@style/viewParent.headerText"
+                            android:textSize="27sp"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    style="@style/reportsCardStyle">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/reportContentText"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Points"/>
+
+                        <TextView
+                            android:id="@+id/view_all"
+                            style="@style/viewParent.headerText"
+                            android:textSize="27sp"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/rangsq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="Informations"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/molkafont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/mange"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:textStyle="bold"
+                        android:text="Department Manger"
+                        android:textColor="#033"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/start"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:textStyle="bold"
+                        android:text="30/11/2010"
+                        android:textColor="#033"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+            <LinearLayout
+                android:background="@drawable/rangsq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="Comunication"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/molkafont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/call"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:textStyle="bold"
+                        android:text="01002365602"
+                        android:textColor="#033"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/mail"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:textStyle="bold"
+                        android:text="elkadymohammed@gmail.com"
+                        android:textColor="#033"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ic_location"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:textStyle="bold"
+                        android:text="Home 6 - Borg Alarb - Alex - Egypt "
+                        android:textColor="#033"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

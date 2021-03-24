@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.som/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Massage">
+
+<ListView
+    android:id="@+id/list_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffff">
+            <TextView
+
+                android:id="@+id/to_p"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/doc" />
+            <EditText
+                android:id="@+id/edt_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/horizontal_dashboard"
+                android:layout_marginTop="@dimen/normalPadding"
+                android:layout_marginRight="@dimen/horizontal_dashboard"
+                android:background="@drawable/container_search"
+                android:drawableStart="@drawable/ic_message_black"
+                android:drawablePadding="@dimen/drawable_left"
+                android:fontFamily="@font/bariol_regular"
+                android:gravity="center_vertical"
+                android:hint="Write Comment"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/normalPadding"
+                android:paddingTop="@dimen/vertical_search"
+                android:paddingRight="@dimen/normalPadding"
+                android:paddingBottom="@dimen/vertical_search"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textColorHint="@color/frutorial_title"
+                android:textSize="14sp"></EditText>
+
+
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

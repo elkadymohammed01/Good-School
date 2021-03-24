@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="24dp"
+    android:layout_marginStart="24dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/loginHeader"
+        android:text="Edit"
+        android:layout_marginTop="@dimen/loginViewsMargin"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEmail"
+        style="@style/parent"
+        android:layout_marginTop="@dimen/loginViewsMargin">
+        <EditText
+            android:id="@+id/xod"
+
+            style="@style/modifiedEditText"
+            android:hint="Title"
+            android:minLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/parent"
+        android:layout_marginTop="@dimen/loginViewsMargin">
+
+        <EditText
+            android:id="@+id/mod"
+
+            style="@style/modifiedEditText"
+            android:hint="Information"
+            android:minLines="10" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/dod"
+        style="@style/dodButton"
+        android:text="Done"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+
+</LinearLayout>

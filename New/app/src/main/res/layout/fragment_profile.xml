@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <ScrollView
+        style="@style/parent"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:toolbarId="@+id/toolbar">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/me"
+                        android:layout_width="250dp"
+                        android:src="@drawable/ic_person_black_24dp"
+                        android:layout_height="250dp"/>
+
+                    <TextView
+                        android:id="@+id/moname"
+                        android:textColor="#000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\@appsnippuser"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/momail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="developer@appsnipp.com"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="20dp"
+                       android:gravity="center">
+
+
+                        <TextView
+                            android:id="@+id/mshop"
+                            style="@style/profileStyledBackButton"
+                            android:text="Go to\nmy Gallery" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"/>
+                <LinearLayout
+                    android:id="@+id/cardLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headerLayout"
+                    android:layout_marginTop="-80dp">
+
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="16dp"
+                        app:cardBackgroundColor="@color/whiteTextColor"
+                        style="@style/reportsCardStyle">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/reportContentText"
+                                android:textColor="@color/colorPrimary"
+                                android:text="Love"/>
+
+                            <TextView
+                                android:id="@+id/love_all"
+                                style="@style/viewParent.headerText"
+                                android:textSize="27sp"
+                                android:text="0"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="16dp"
+                        app:cardBackgroundColor="@color/whiteTextColor"
+                        style="@style/reportsCardStyle">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/reportContentText"
+                                android:textColor="@color/colorPrimary"
+                                android:text="View"/>
+
+                            <TextView
+                                android:id="@+id/view_all"
+                                style="@style/viewParent.headerText"
+                                android:textSize="27sp"
+                                android:text="0"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+                <include layout="@layout/account" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
